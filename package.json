@@ -12,5 +12,8 @@
     "next": "9.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^1.8.0"
   }
 }

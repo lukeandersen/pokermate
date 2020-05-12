@@ -1,14 +1,14 @@
 import firebase from 'firebase'
 
 const config = {
-    apiKey: "AIzaSyDSBbCaOsOugM09yvNmOeRz5jHec1sgee4",
-    authDomain: "pokermate-9aab7.firebaseapp.com",
-    databaseURL: "https://pokermate-9aab7.firebaseio.com",
-    projectId: "pokermate-9aab7",
-    storageBucket: "pokermate-9aab7.appspot.com",
-    messagingSenderId: "802292736041",
-    appId: "1:802292736041:web:6f536d625b449958effc38",
-    measurementId: "G-MB87YFZHGN"
+    apiKey: process.env.FIREBASE_APIKEY,
+    authDomain: process.env.FIREBASE_AUTHDOMAIN,
+    databaseURL: process.env.FIREBASE_DATABASEURL,
+    projectId: process.env.FIREBASE_PROJECTID,
+    storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+    appId: process.env.FIREBASE_APPID,
+    measurementId: process.env.FIREBASE_MEASUREMENTID,
 }
 
 if (!firebase.apps.length) {
