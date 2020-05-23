@@ -12,7 +12,7 @@ const Home = () => {
         firebase.auth().onAuthStateChanged((user) => {
             console.log('user:', user)
             if (!user) {
-                router.push(routes.SIGN_IN)
+                router.push('/login')
             }
             setUser(user)
         })
