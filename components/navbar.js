@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useState } from 'react'
 import { firebase } from '../utils/firebase'
 
 const Navbar = ({ auth, fluid }) => {
@@ -8,13 +9,17 @@ const Navbar = ({ auth, fluid }) => {
         })
     }
 
+    const [show, setShow] = useState(false)
+
     return (
         <div className="navbar">
             <div className={`${fluid ? 'container container-fluid' : 'container'}`}>
                 <div className="logo text-light">
                     <Link href="/"><a>🐶 Pokermate</a></Link>
                 </div>
-                <nav>
+                <button className="mobile-menu" onClick={() => setShow(!show)}>&#9776; Menu</button>
+                <nav className={`${show ? 'show' : ''}`}>
+                    <button className="btn btn-link mobile-menu-close" onClick={() => setShow(!show)}>&times; Close</button>
                     {!auth ? (
                         <>
                             <a href="/">Pricing</a>

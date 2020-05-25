@@ -63,7 +63,56 @@ main {
         justify-content: center;
     }
 
+    .mobile-menu {
+        color: white;
+        padding: 1rem;
+
+        @media (min-width: 899px) {
+            display: none;
+        }
+    }
+
     nav {
+        display: none;
+
+        &.show {
+            display: inline-block;
+            background: black;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100vh;
+            max-width: 300px;
+            padding: 2rem;
+
+            a, button {
+                margin: 1rem 0;
+                display: block;
+                padding: 0;
+                border: none;
+                text-align: right;
+                color: white;
+            }
+
+            .mobile-menu-close {
+                margin-bottom: 3rem!important;
+                font-weight: 700;
+                width: 100%;
+            }
+        }
+
+        .mobile-menu-close {
+            @media (min-width: 900px) {
+                display: none;
+            }
+        }
+
+
+        @media (min-width: 900px) {
+            display: inline-block;
+        }
+
         a, button {
             color: $gray;
             border-color: $gray;
