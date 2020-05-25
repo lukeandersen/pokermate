@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { db, firebase } from '../components/firebase'
+import { db, firebase } from '../utils/firebase'
+import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 
 const Home = () => {
@@ -21,24 +21,21 @@ const Home = () => {
     if (!user) return 'Loading...'
 
     return (
-        <div className="container">
-            <Head>
-                <title>Pokermate</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            <main>
-                <h1 className="title">Dashboard</h1>
-                <p>{user.email}</p>
-                <hr />
-                <nav>
-                    <Link href="/login"><a>New game</a></Link> &nbsp;
-                    <Link href="/login"><a>Join a game</a></Link>
-                </nav>
-            </main>
-
+        <>
+            <Navbar auth fluid />
+            <div className='container container-fluid'>
+                <main>
+                    <h1 className="title">Dashboard</h1>
+                    <p>{user.email}</p>
+                    <hr />
+                    <nav>
+                        <Link href="/login"><a>New game</a></Link> &nbsp;
+                        <Link href="/login"><a>Join a game</a></Link>
+                    </nav>
+                </main>
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }
 

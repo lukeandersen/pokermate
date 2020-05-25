@@ -1,119 +1,247 @@
+@import '~normalize.css/normalize.css';
+
+$primary: #6851ff;
+$gray: #bdbdbd;
+$body: #333;
+$snow: #f3f3f3;
+
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.75;
 }
 
 * {
     box-sizing: border-box;
 }
 
-.container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+a, button, input[type="submit"] {
+    &:hover, &:focus {
+        transition: all .2s ease-in-out;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
 }
 
 main {
-    padding: 5rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.title a {
-    color: #0070f3;
-    text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-    text-decoration: underline;
+    min-height: 88vh;
 }
 
 .title {
-    margin: 0;
-    line-height: 1.15;
-    font-size: 4rem;
+    font-size: 3.125em;
 }
 
-.title,
-.description {
-    text-align: center;
+.container {
+    max-width: 1200px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.container-sm {
+        max-width: 550px;
+    }
+
+    &.container-fluid {
+        max-width: 100%;
+    }
 }
 
-.description {
-    line-height: 1.5;
-    font-size: 1.5rem;
-}
+// Navbar
+.navbar {
+    background: black;
+    padding: 1.75rem 0;
 
-code {
-    background: #fafafa;
-    border-radius: 5px;
-    padding: 0.75rem;
-    font-size: 1.1rem;
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-}
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    nav {
+        a, button {
+            color: $gray;
+            border-color: $gray;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
 
-    max-width: 800px;
-    margin-top: 3rem;
-}
+            &.active, &:hover {
+                color: $primary;
+                border-color: $primary;
+            }
 
-.card {
-    margin: 1rem;
-    flex-basis: 45%;
-    padding: 1.5rem;
-    text-align: left;
-    color: inherit;
-    text-decoration: none;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-    color: #0070f3;
-    border-color: #0070f3;
-}
-
-.card h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-}
-
-.card p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
+            &.active {
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 .logo {
-    height: 1em;
-}
+    flex: 1;
+    font-weight: 700;
+    font-size: 2rem;
 
-@media (max-width: 600px) {
-    .grid {
-        width: 100%;
-        flex-direction: column;
+    a {
+        color: inherit;
+        text-decoration: none;
     }
 }
+
+.section {
+    padding: 6rem 0;
+}
+
+// Home
+.hero {
+    text-align: center;
+    padding: 10rem 0;
+
+    .btn {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+// Footer
+footer {
+    background: $snow;
+}
+
+// Forms
+fieldset {
+    border: none;
+    padding: 0;
+}
+.form-group {
+    margin-bottom: 1rem;
+    text-align-last: left;
+}
+label {
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+input {
+    border: 3px solid $gray;
+    width: 100%;
+    display: block;
+    border-radius: 9px;
+    padding: 1rem;
+
+    &:focus {
+        outline: 0;
+        border-color: $primary;
+    }
+}
+
+// Buttons
+.btn {
+    padding: 1rem 2rem;
+    border: 2px solid $snow;
+    background-color: $snow;
+    border-radius: 9px;
+    text-decoration: none;
+    color: $body;
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+
+    &.btn-block {
+        display: block;
+        width: 100%;
+    }
+
+    &.btn-primary {
+        background: $primary;
+        border: 2px solid $primary;
+        color: white;
+    }
+
+    &.btn-outline {
+        background-color: transparent;
+    }
+
+    &.btn-link {
+        padding: 0;
+        border: 0;
+        background: none;
+    }
+
+    &.btn-lg {
+        padding: 1.5rem 4rem;
+        font-size: 1.125rem;
+    }
+}
+
+// Cards
+.card {
+    padding: 4rem;
+    border-radius: 9px;
+    box-shadow: 0 0 20px $primary;
+    width: 100%;
+}
+
+// Helpers
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+    }
+}
+.text-gradient {
+    background: -webkit-radial-gradient(70.54% 89.31% at 70.54% 26.27%,rgba(48,61,177,.85) 0,#6851ff 0,#00c988 84.29%);
+    background: -o-radial-gradient(70.54% 89.31% at 70.54% 26.27%,rgba(48,61,177,.85) 0,#6851ff 0,#00c988 84.29%);
+    background: radial-gradient(70.54% 89.31% at 70.54% 26.27%,rgba(48,61,177,.85) 0,#6851ff 0,#00c988 84.29%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.highlight {
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(50%,hsla(0,0%,100%,0)),color-stop(50%,#5feea4));
+    background: -webkit-linear-gradient(top,hsla(0,0%,100%,0) 50%,#5feea4 0);
+    background: -o-linear-gradient(top,hsla(0,0%,100%,0) 50%,#5feea4 50%);
+    background: linear-gradient(180deg,hsla(0,0%,100%,0) 50%,#5feea4 0);
+}
+.text-light {
+    color: white;
+}
+
+.text-dark {
+    color: black;
+}
+.bg-dark {
+    background: black;
+    color: white;
+}
+.bg-light {
+    background: white;
+    color: black;
+}
+
+// Layouts
+.auth-layout {
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 4rem;
+
+
+    input {
+        background: transparent;
+        color: white;
+    }
+}
+
+.m-0 {
+    margin: 0;
+}
+

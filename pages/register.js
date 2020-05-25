@@ -28,7 +28,7 @@ const Login = () => {
         const { email, password } = formData
         firebase
             .auth()
-            .signInWithEmailAndPassword(email, password)
+            .createUserWithEmailAndPassword(email, password)
             .then((user) => {
                 console.log(user)
                 router.push('/dashboard')
@@ -48,10 +48,10 @@ const Login = () => {
                 <div className="logo">
                     <Link href="/"><a>🐶 Pokermate</a></Link>
                 </div>
-                <h1 className="title text-gradient m-0">Login</h1>
+                <h1 className="title text-gradient m-0">Register</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <Form schema={schema} onSubmit={login}>
-                    <button type="submit" className="btn btn-primary btn-lg btn-block">Log In</button>
+                    <button type="submit" className="btn btn-primary btn-lg btn-block">Sign Up</button>
                 </Form>
             </div>
         </div>
