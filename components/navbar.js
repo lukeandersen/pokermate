@@ -17,8 +17,6 @@ const Navbar = ({ auth, fluid }) => {
                 <nav>
                     {!auth ? (
                         <>
-                            <a href="/">Home</a>
-                            <a href="/">About</a>
                             <a href="/">Pricing</a>
                             <Link href="/register"><a>Register</a></Link>
                             <Link href="/login"><a className="btn btn-outline">Login</a></Link>
