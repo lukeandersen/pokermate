@@ -17,7 +17,7 @@ const Navbar = ({ auth, fluid }) => {
                 <div className="logo text-light">
                     <Link href="/"><a>🐶 Pokermate</a></Link>
                 </div>
-                <button className="mobile-menu" onClick={() => setShow(!show)}>&#9776; Menu</button>
+                <button className="btn btn-link mobile-menu" onClick={() => setShow(!show)}>&#9776; Menu</button>
                 <nav className={`${show ? 'show' : ''}`}>
                     <button className="btn btn-link mobile-menu-close" onClick={() => setShow(!show)}>&times; Close</button>
                     {!auth ? (
