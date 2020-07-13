@@ -1346,10 +1346,10 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@rjsf/core@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@rjsf/core/-/core-2.0.2.tgz#b6fdbcd730711ee0f985c7940f5b4f61ac4da77c"
-  integrity sha512-2QpWwhc9epc37G8K0jsFfjgjooPSq7zjqvtoixuHhYBTc3ixYcmSWmzNbt/MtTvMvt1hZHXZTVQeXYcGjqXgIQ==
+"@rjsf/core@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@rjsf/core/-/core-2.2.1.tgz#ce6d6b0bd8f16f4c9d8ecad8a2c3023e680eccf8"
+  integrity sha512-XUpUUF1EParZjFIfgZXzu0lP8YWK/R+38UfXuP7JEu8NqopRdw6J4XqVhcYjJtdULsi3lr279CSOmJuyzokJGg==
   dependencies:
     "@babel/runtime-corejs2" "^7.8.7"
     "@types/json-schema" "^7.0.4"
