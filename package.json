@@ -17,6 +17,6 @@
     "sass": "1.29.0"
   },
   "devDependencies": {
-    "dotenv-webpack": "1.8.0"
+    "dotenv-webpack": "5.1.0"
   }
 }
