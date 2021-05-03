@@ -10,7 +10,7 @@
   "dependencies": {
     "@rjsf/core": "2.5.1",
     "firebase": "8.4.2",
-    "next": "9.5.4",
+    "next": "9.5.5",
     "normalize.css": "8.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
