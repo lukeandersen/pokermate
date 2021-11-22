@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@rjsf/core": "3.2.0",
+    "@rjsf/core": "3.2.1",
     "firebase": "8.10.0",
     "next": "12.0.3",
     "normalize.css": "8.0.1",
